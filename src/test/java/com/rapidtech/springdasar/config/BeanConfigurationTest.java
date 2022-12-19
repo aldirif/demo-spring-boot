@@ -18,15 +18,12 @@ class BeanConfigurationTest {
         Foo foo1 = context.getBean(Foo.class);
         Foo foo2 = context.getBean(Foo.class);
         Foo foo3 = context.getBean(Foo.class);
+        Assertions.assertSame(foo1,foo2);
+        Assertions.assertSame(foo2,foo3);
 
         TryBean tryBean1 = context.getBean(TryBean.class);
         TryBean tryBean2 = context.getBean(TryBean.class);
         TryBean tryBean3 = context.getBean(TryBean.class);
-
-
-        Assertions.assertSame(foo1,foo2);
-        Assertions.assertSame(foo2,foo3);
-
         Assertions.assertSame(tryBean1, tryBean2);
         Assertions.assertSame(tryBean2, tryBean3);
     }

@@ -10,7 +10,6 @@ class TrySingletonTest {
     void singletonTest(){
         TrySingleton trySingleton1 = TrySingleton.getInstance();
         TrySingleton trySingleton2 = TrySingleton.getInstance();
-
         Assertions.assertSame(trySingleton1, trySingleton2);
     }
 }

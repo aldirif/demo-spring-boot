@@ -11,7 +11,6 @@ class DatabaseTest {
         Database database1 = Database.getInstance();
         Database database2 = Database.getInstance();
         Database database3 = Database.getInstance();
-
         Assertions.assertSame(database1, database2);
         Assertions.assertSame(database1, database3);
     }
